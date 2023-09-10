@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speech and Text Interaction with Translation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            max-width: 400px;
+            border-top: 5px solid #007bff;
+        }
+
+        .box h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        select, input[type="text"], input[type="file"] {
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result-box {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .time-lapse {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speech and Text Interaction</h1>
+
+    <!-- Speech-to-Speech Box -->
+    <div class="box">
+        <h2>Speech-to-Speech</h2>
+        <button id="startListening">Start Listening</button>
+        <div id="speechResult" class="result-box"></div>
+        <div id="speechTimeLapse" class="time-lapse"></div>
+    </div>
+
+    <!-- Text-to-Text Box -->
+    <div class="box">
+        <h2>Text-to-Text</h2>
+        <input type="text" id="textInput" placeholder="Enter text...">
+        <label for="languageSelect">Select Language:</label>
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="hi">Hindi</option>
+            <option value="ur">Urdu</option>
+            <option value="ko">Korean</option>
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <!-- Add more language options here -->
+        </select>
+        <button id="translateButton">Translate</button>
+        <div id="translationResult" class="result-box"></div>
+        <div id="translationTimeLapse" class="time-lapse"></div>
+    </div>
+
+    <!-- Text-to-Speech Box -->
+    <div class="box">
+        <h2>Text-to-Speech</h2>
+        <input type="text" id="textInput2" placeholder="Enter text...">
+        <label for="languageSelect2">Select Language:</label>
+        <select id="languageSelect2">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="hi">Hindi</option>
+            <option value="ur">Urdu</option>
+            <option value="ko">Korean</option>
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <!-- Add more language options here -->
+        </select>
+        <button id="speakButton">Speak</button>
+        <div id="textToSpeechResult" class="result-box"></div>
+        <div id="textToSpeechTimeLapse" class="time-lapse"></div>
+    </div>
+
+    <!-- Audio Translation Box -->
+    <div class="box">
+        <h2>Audio Translation</h2>
+        <input type="file" id="audioInput" accept=".mp3, .wav">
+        <label for="audioLanguageSelect">Select Language:</label>
+        <select id="audioLanguageSelect">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="hi">Hindi</option>
+            <option value="ur">Urdu</option>
+            <option value="ko">Korean</option>
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <!-- Add more language options here -->
+        </select>
+        <button id="translateAudioButton">Translate Audio</button>
+        <div id="audioTranslationResult" class="result-box"></div>
+        <div id="audioTranslationTimeLapse" class="time-lapse"></div>
+    </div>
+
+    <script>
+        // JavaScript code remains the same
+    </script>
+</body>
+</html>
